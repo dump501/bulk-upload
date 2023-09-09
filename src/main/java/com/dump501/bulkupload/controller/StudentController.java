@@ -12,9 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -45,7 +43,7 @@ public class StudentController {
             //init
             Path resourcesPath = Paths.get("src/main/resources/static/Api.png");
             Document document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream("src/main/resources/hello.pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream("src/main/resources/students.pdf"));
 
             // open the document
             document.open();
